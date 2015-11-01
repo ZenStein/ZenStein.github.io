@@ -1,0 +1,60 @@
+Useful Snippets
+<!--  SOMECLASS MUST explicitly define height and width, which we will call X, and Y respectively  -->
+<!-- You have to play around with your image SVG, as it varies depending on outside vars  -->
+
+<!-- Template : #ghostborderanim   (don't forget 'Space' to expand)-->
+
+            <div class="<SOMECLASS>">
+                <svg>
+                    <line class="top" x1="0" y1=".5" x2="<3X>" y2=".5" />
+                    <line class="left" x1=".5" y1="<Y>" x2=".5" y2="-<2Y>" />
+                    <line class="bottom" x1="<X>" y1="<Y> - .5" x2="-<2X>" y2="<Y> - .5" />
+                    <line class="right" x1="<X> - .5" y1="0" x2="<X> - .5" y2="<3Y>" />
+                </svg>
+                <img src="imgs/splot.svg" height="<Z>" width="<Z>">
+            </div>
+
+<!--  these numbers are with a height of 150 and width of 33-->
+<style>
+.test-box{
+    position: relative;
+    height: 33px;
+    width: 150px;
+    text-align: center;
+    padding-top: 3px;
+}
+.test-box svg, .blog-snip svg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.test-box svg > line, .blog-snip svg > line {
+    visibility: hidden;
+    stroke: white;
+    stroke-width: 1px;
+/*    fill: white;*/
+    -webkit-transition: -webkit-transform 1s;
+}
+.test-box svg:hover line{
+    visibility: visible;
+}
+.test-box svg:hover .top{
+    -webkit-transform: translateX(-300px);
+    stroke-dasharray: 150;
+}
+.test-box svg:hover .left{
+    -webkit-transform: translateY(66px);
+    stroke-dasharray: 33;
+}
+.test-box svg:hover .bottom{
+    -webkit-transform: translateX(300px);
+    stroke-dasharray: 150;
+}
+.test-box svg:hover .right{
+    -webkit-transform: translateY(-66px);
+    stroke-dasharray: 33;
+}
+</style>
+
