@@ -29,18 +29,26 @@ body{
     height: 100%;
 }
 #cfs-wireframe-topbar li{
-    height: auto;
-    width:32%;
+    position: relative;
     display: inline-block;
     list-style-type: none;
     color:white;
     vertical-align: middle;
+    height: auto;
+}
+#cfs-wireframe-topbar li:first-child{
+    text-align: left;
+    width:10%;
 }
 #cfs-wireframe-topbar li:nth-child(2){
+
     text-align: center;
+
+    width: 70%;
 }
 #cfs-wireframe-topbar li:last-child{
     text-align: right;
+    width: 15%;
 }
 #cfs-wireframe-foot-nav{
     position: fixed;
@@ -67,43 +75,45 @@ body{
     height: 600px;
     width: 75%;
 }
-.test-box{
+.cfs-ghost-border{
     position: relative;
-    height: 33px;
-    width: 150px;
+        margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    width: 300px;
     text-align: center;
     padding-top: 3px;
 }
-.test-box svg, .blog-snip svg{
+.cfs-ghost-border svg, .blog-snip svg{
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
 }
-.test-box svg > line, .blog-snip svg > line {
+.cfs-ghost-border svg > line, .blog-snip svg > line {
     visibility: hidden;
     stroke: white;
     stroke-width: 1px;
 /*    fill: white;*/
     -webkit-transition: -webkit-transform 1s;
 }
-.test-box svg:hover line{
+.cfs-ghost-border svg:hover line{
     visibility: visible;
 }
-.test-box svg:hover .top{
+.cfs-ghost-border svg:hover .top{
     -webkit-transform: translateX(-300px);
     stroke-dasharray: 150;
 }
-.test-box svg:hover .left{
+.cfs-ghost-border svg:hover .left{
     -webkit-transform: translateY(66px);
     stroke-dasharray: 33;
 }
-.test-box svg:hover .bottom{
+.cfs-ghost-border svg:hover .bottom{
     -webkit-transform: translateX(300px);
     stroke-dasharray: 150;
 }
-.test-box svg:hover .right{
+.cfs-ghost-border svg:hover .right{
     -webkit-transform: translateY(-66px);
     stroke-dasharray: 33;
 }
@@ -216,21 +226,21 @@ body{
 <div id="cfs-wireframe-topbar">
     <ul>
         <li>
-            <img src="imgs/dots_menu.svg" style="height: 20px; width: 20px">
+            <img src="imgs/dots_menu.svg" style="height: 50px; width: 50px">
         </li>
         <li>
-            <div class="test-box">
+            <div class="cfs-ghost-border">
                 <svg>
-                    <line class="top" x1="0" y1=".5" x2="450" y2=".5" />
-                    <line class="left" x1=".5" y1="33" x2=".5" y2="-66" />
-                    <line class="bottom" x1="150" y1="32.5" x2="-300" y2="32.5" />
-                    <line class="right" x1="149.5" y1="0" x2="149.5" y2="99" />
+                    <line class="top" x1="0" y1=".5" x2="<3X>" y2=".5" />
+                    <line class="left" x1=".5" y1="<Y>" x2=".5" y2="-<2Y>" />
+                    <line class="bottom" x1="<X>" y1="<Y> - .5" x2="-<2X>" y2="<Y> - .5" />
+                    <line class="right" x1="<X> - .5" y1="0" x2="<X> - .5" y2="<3Y>" />
                 </svg>
-                <img src="imgs/splot.svg" height="25" width="25">
+                <img src="imgs/splot.svg" height="125" width="300">
             </div>
         </li>
         <li>
-            <img src="imgs/dots_menu.svg" style="height: 20px; width: 20px">
+            <img src="imgs/dots_menu.svg" style="height: 50px; width: 50px">
         </li>
     </ul>
 </div>
