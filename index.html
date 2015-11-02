@@ -103,20 +103,20 @@ body{
     visibility: visible;
 }
 .cfs-ghost-border svg:hover .top{
-    -webkit-transform: translateX(-300px);
-    stroke-dasharray: 150;
+    -webkit-transform: translateX(-600px);
+    stroke-dasharray: 300;
 }
 .cfs-ghost-border svg:hover .left{
-    -webkit-transform: translateY(66px);
-    stroke-dasharray: 33;
-}
-.cfs-ghost-border svg:hover .bottom{
-    -webkit-transform: translateX(300px);
+    -webkit-transform: translateY(300px);
     stroke-dasharray: 150;
 }
+.cfs-ghost-border svg:hover .bottom{
+    -webkit-transform: translateX(600px);
+    stroke-dasharray: 300;
+}
 .cfs-ghost-border svg:hover .right{
-    -webkit-transform: translateY(-66px);
-    stroke-dasharray: 33;
+    -webkit-transform: translateY(-300px);
+    stroke-dasharray: 150;
 }
 /**********************************************************/
 .blog-snip svg:hover line{
@@ -232,10 +232,10 @@ body{
         <li>
             <div class="cfs-ghost-border">
                 <svg>
-                    <line class="top" x1="0" y1=".5" x2="<3X>" y2=".5" />
-                    <line class="left" x1=".5" y1="<Y>" x2=".5" y2="-<2Y>" />
-                    <line class="bottom" x1="<X>" y1="<Y> - .5" x2="-<2X>" y2="<Y> - .5" />
-                    <line class="right" x1="<X> - .5" y1="0" x2="<X> - .5" y2="<3Y>" />
+                    <line class="top" x1="0" y1=".5" x2="900" y2=".5" />
+                    <line class="left" x1=".5" y1="150" x2=".5" y2="-300" />
+                    <line class="bottom" x1="300" y1="149.5" x2="-600" y2="149.5" />
+                    <line class="right" x1="299.5" y1="0" x2="299.5" y2="450" />
                 </svg>
                 <img src="imgs/splot.svg" height="125" width="300">
             </div>
@@ -249,6 +249,7 @@ body{
 
 <div class="content-containter">
     <div class="blog-snip blog-snip-left">
+        <a href="https://www.ZenStein.github.io.com/blog">
         <svg>
             <circle class="about-me" r="25%" cy="35%" cx="50%" ></circle>
             <line class="top" x1="0" y1=".5" x2="600" y2=".5" />
@@ -256,6 +257,7 @@ body{
             <line class="bottom" x1="200" y1="150" x2="-400" y2="150" />
             <line class="right" x1="199.5" y1="0" x2="199.5" y2="450" />
         </svg>
+        </a>
     </div>
     <div class="blog-snip blog-snip-right">
         <svg>
