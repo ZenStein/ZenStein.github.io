@@ -1,5 +1,6 @@
 
 ![screen shot 1](https://ZenStein.github.io/phase-0/week-3/chrome-devtools/imgs/Challenge1.PNG)
+<<<<<<< HEAD
 ![screen shot 2](https://ZenStein.github.io/phase-0/week-3/chrome-devtools/imgs/Challenge2.PNG)
 ![screen shot 3](https://ZenStein.github.io/phase-0/week-3/chrome-devtools/imgs/Challenge3.PNG)
 ![screen shot 4](https://ZenStein.github.io/phase-0/week-3/chrome-devtools/imgs/Challenge4.PNG)
@@ -10,6 +11,8 @@
 ![screen shot 9](https://ZenStein.github.io/phase-0/week-3/chrome-devtools/imgs/Challenge9.PNG)
 ![screen shot 10](https://ZenStein.github.io/phase-0/week-3/chrome-devtools/imgs/Capture10.PNG)
 ![screen shot 11](https://ZenStein.github.io/phase-0/week-3/chrome-devtools/imgs/Capture11.PNG)
+=======
+>>>>>>> 239cfbb809ba185e3e5d5bf6906ffbc47202edb5
 
 ##How can you use Chrome's DevTools inspector to help you format or position elements?##
 ##How can you resize elements on the DOM using CSS?##
