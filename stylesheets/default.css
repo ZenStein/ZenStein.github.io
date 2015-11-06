@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+}
+ul{
+    padding-left: 0px;
+    margin:0px;
+}
+body{
+    background: url(../imgs/dark_illuminated_BG_texture.jpg);
+    background-size: 100%;
+    height: auto;
+    width: 100%;
+}
+#cfs-wireframe-topbar{
+    position: fixed;
+    width:100%;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+}
+#cfs-wireframe-topbar ul{
+    width: 100%;
+    height: 100%;
+}
+#cfs-wireframe-topbar li{
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    color:white;
+    vertical-align: middle;
+    height: auto;
+}
+#cfs-wireframe-topbar li:first-child{
+    text-align: left;
+    width:10%;
+}
+#cfs-wireframe-topbar li:nth-child(2){
+
+    text-align: center;
+
+    width: 70%;
+}
+#cfs-wireframe-topbar li:last-child{
+    text-align: right;
+    width: 15%;
+}
+#cfs-wireframe-foot-nav{
+    position: fixed;
+    left:0px;
+    bottom: 0px;
+}
+#cfs-wireframe-foot-nav, #cfs-wireframe-foot-nav ul{
+    width:100%;
+    padding: 0px;
+}
+#cfs-wireframe-foot-nav li{
+    width: 13%;
+    display: inline;
+    float: left;
+    position:relative;
+    list-style-type: none;
+    color: lawngreen;
+    text-align: center;
+}
+.content-containter{
+
+    margin:10%;
+    padding: 15px;
+    height: 600px;
+    width: 75%;
+}
+.cfs-ghost-border{
+    position: relative;
+        margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+    width: 300px;
+    text-align: center;
+    padding-top: 3px;
+}
+.cfs-ghost-border svg, .blog-snip svg{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.cfs-ghost-border svg > line, .blog-snip svg > line {
+    visibility: hidden;
+    stroke: white;
+    stroke-width: 1px;
+/*    fill: white;*/
+    -webkit-transition: -webkit-transform 1s;
+}
+.cfs-ghost-border svg:hover line{
+    visibility: visible;
+}
+.cfs-ghost-border svg:hover .top{
+    -webkit-transform: translateX(-600px);
+    stroke-dasharray: 300;
+}
+.cfs-ghost-border svg:hover .left{
+    -webkit-transform: translateY(300px);
+    stroke-dasharray: 150;
+}
+.cfs-ghost-border svg:hover .bottom{
+    -webkit-transform: translateX(600px);
+    stroke-dasharray: 300;
+}
+.cfs-ghost-border svg:hover .right{
+    -webkit-transform: translateY(-300px);
+    stroke-dasharray: 150;
+}
+/**********************************************************/
+.blog-snip svg:hover line{
+    visibility: visible;
+}
+
+.blog-snip svg:hover .top{
+    -webkit-transform: translateX(-400px);
+    stroke-dasharray: 200;
+}
+.blog-snip svg:hover .left{
+    -webkit-transform: translateY(300px);
+    stroke-dasharray: 150;
+}
+.blog-snip svg:hover .bottom{
+    -webkit-transform: translateX(400px);
+    stroke-dasharray: 200;
+}
+.blog-snip svg:hover .right{
+    -webkit-transform: translateY(-300px);
+    stroke-dasharray: 150;
+}
+/**********************************************************/
+.blog-snip-left{
+    float: left;
+    clear: both;
+}
+.blog-snip-right{
+    float: right;
+    top: -15px;
+    clear: both;
+}
+.blog-snip{
+    position: relative;
+    height: 150px;
+    width: 200px;
+/*    border: 1px solid black;*/
+    -webkit-transition: background-color 1s;
+}
+.blog-snip:hover{
+    /*background-color: white;*/
+}
+.blog-snip svg circle{
+    fill: black;
+    stroke: white;
+    stroke-width: .5px;
+    opacity: .5;
+}
+/*.blog-snip:hover svg circle{
+    -webkit-animation: pic-out 1s forwards;
+}*/
+.blog-snip:hover svg .about-me{
+ -webkit-animation: pic-out 1s forwards, about-me-pic-in 1s forwards;
+}
+@-webkit-keyframes about-me-pic-in {
+    50% {
+        fill: url(#image);
+    }
+    100% {
+        fill: url(#image);
+    }
+}
+.blog-snip:hover svg .robo_lion{
+ -webkit-animation: pic-out 1s forwards, robo-lion-pic-in 1s forwards;
+}
+@-webkit-keyframes robo-lion-pic-in{
+    50% {
+        fill: url(#robo_lion);
+    }
+    100% {
+        fill: url(#robo_lion);
+    }
+}
+
+@-webkit-keyframes pic-out {
+    0% {
+        opacity: .5;
+        stroke-width: .5px;
+    }
+    10%{
+        opacity: 0;
+        stroke-width: 0px;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+        stroke-width: 0px;
+    }
+}
+.blog-snip-header{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    font-size: 26px;
+    text-align: center;
+}
