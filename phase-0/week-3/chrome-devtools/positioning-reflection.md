@@ -1,5 +1,5 @@
 
-![screen shot 1](https://ZenStein.github.io/phase-0/week-3/chrome-devtools/imgs/Capture1.PNG)
+[screen shot 1](https://ZenStein.github.io/phase-0/week-3/chrome-devtools/imgs/Capture1.PNG)
 
 ##How can you use Chrome's DevTools inspector to help you format or position elements?##
 ##How can you resize elements on the DOM using CSS?##
