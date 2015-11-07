@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../imgs/favicon.ico"/>
+     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css" />
+     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css" />
+    <title>BLog</title>
+</head>
+<body>
+<div class="blog-carousel-container">
+    <div class="blog-carousel-arrow blog-carousel-arrow-left">
+        <img src="imgs/left-arrow.svg">
+    </div>
+    <div class="blog-carousel-picture-container"></div>
+    <div class="blog-carousel-arrow blog-carousel-arrow-right">
+        <img src="imgs/right-arrow.svg">
+    </div>
+</div>
+<div class="blog-template-head">Basics of SVG and CSS<br>
+    <small>can you find a more frustrating combination??</small>
+<div class="blog-body-desc">Scope:</div>
+<div class="blog-body">I am going to assume you are a web developer who is interested in being able to embed
+svg's into your website, and while your at it, add some CSS styling to your svg. There is a ton of info out there,
+    and this blog is not an attempt at adding to that info.  This blog is to help a beginner get an overall understanding, and
+    hopefully be able to avoid a few pitfalls.The following are some useful facts.</div>
+
+    <div class="blog-body-desc">Good to know:</div>
+
+    <div class="blog-body">
+    <ul>
+        <li>There are 2 ways to bring in an SVG. The simple basic way looks like this:</li><br>
+       <li> <code>&lt;img src=&quot;path/to/SOME_SVG.sgv&quot; /&gt; </code></li><br>
+
+    <li>The other way, although a little more involved, allows for CSS manipulation. You embed the actual svg code into your html.  You do this by opening your
+    svg in a text editor, copying the code, and pasting it into you html. It will look something like this:<br>
+    &lt;div&gt;<br>
+    &lt;svg&gt; *** &lt;/svg&gt;<br>
+    &lt;/div&gt;<br>
+        </li>
+        <li>If you inline style an SVG, you cannot apply any CSS rules to it.</li>
+        <li>There are special rules, 'stroke' and 'fill' that are used to style only svg elements</li>
+    </ul>
+</div>
+</div>
+</body>
+<footer class="blog-footer"></footer>
+</html>
+
+
