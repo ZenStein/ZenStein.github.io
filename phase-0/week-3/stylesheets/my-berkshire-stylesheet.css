@@ -1,0 +1,54 @@
+/*html {
+    background-color: red;
+}*/
+
+* {
+    color: #000080;
+}
+
+a {
+    color: #800080;
+}
+
+a:visited {
+    color: #ff0000;
+}
+
+h1, .company-title, title {
+    content: "\a";
+    white-space: pre;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+h1:after {
+    content: "\a";
+    white-space: pre;
+
+}
+
+li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+li:nth-child(even) {
+    position: relative;
+    float: left;
+    clear: left;
+    width: 50%;
+}
+
+li:nth-child(odd) {
+    float: right;
+    clear: right;
+    width: 50%;
+    position: relative
+}
+
+.links {
+    text-align: left;
+    width: 100%;
+}
