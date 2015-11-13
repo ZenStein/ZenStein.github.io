@@ -30,9 +30,9 @@ $33.333333333. In this case you would set the precision to 2, and the outcome wo
 
 
 ##Reflection##
-(simple strings)[https://github.com/ZenStein/ZenStein.github.io/blob/master/phase-0/week-4/simple-string.rb]
-(defining variables)[https://github.com/ZenStein/ZenStein.github.io/blob/master/phase-0/week-4/defining-variables.rb]
-(basic math)[https://github.com/ZenStein/ZenStein.github.io/blob/master/phase-0/week-4/basic-math.rb]
+[simple strings](https://github.com/ZenStein/ZenStein.github.io/blob/master/phase-0/week-4/simple-string.rb)
+[defining variables](https://github.com/ZenStein/ZenStein.github.io/blob/master/phase-0/week-4/defining-variables.rb)
+[basic math](https://github.com/ZenStein/ZenStein.github.io/blob/master/phase-0/week-4/basic-math.rb)
 #How does Ruby handle addition, subtraction, multiplication, and division of numbers?#
 using + - * and /
 #What is the difference between integers and floats?#
