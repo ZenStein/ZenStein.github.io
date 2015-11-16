@@ -93,3 +93,7 @@
     height: 400px;
     background-color: InfoText;
 }
+.ruby{
+
+    overflow-x: scroll;
+}
