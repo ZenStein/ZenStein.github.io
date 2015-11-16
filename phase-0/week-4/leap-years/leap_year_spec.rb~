@@ -1,4 +1,4 @@
-require_relative "my-solution-refract.rb"
+require_relative "my-solution.rb"
 
 describe 'leap_year?' do
   it 'is defined as a method' do
