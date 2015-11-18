@@ -1,94 +1,77 @@
 
-=begin
+
+
 # 1. Initial Solution
+#
+# def separate_comma int
+#    input_s = int.to_s
+#    returned_input = ''
+#    i = 0
+#    start = input_s.length % 3
+#    for i in 0...input_s.length
+#        if  i !=0 && (start == i || (i - start)%3 == 0)
+#            returned_input += ',' + input_s[i]
+#        else
+#            returned_input += input_s[i]
+#        end
+#        i += 1
+#    end
+#    returned_input
+# end
 
-def separate_comma int
-    input_s = int.to_s
-    returned_input = ''
-    i = 0
-    start = input_s.length % 3
-    for i in 0...input_s.length
-        if  i !=0 && (start == i || (i - start)%3 == 0)
-            returned_input += ',' + input_s[i]
-        else
-            returned_input += input_s[i]
-        end
-        i += 1
-    end
-    returned_input
-end
 
-puts separate_comma 1
-puts separate_comma 10
-puts separate_comma 100
-puts separate_comma 1000
-puts separate_comma 10000
-puts separate_comma 100000
-puts separate_comma 1000000
-puts separate_comma 10000000
-puts separate_comma 100000000
-puts separate_comma 1000000000
-puts separate_comma 1000000000000000000000000000000000
-puts separate_comma 10000000000000000000000000000000000
-puts separate_comma 100000000000000000000000000000000000
-=end
 
 
 # 2. Refactored Solution
-class IntHandle
-def initialize int
+
+class IntHandler
+    attr_reader :commified
+    def initialize int
+        @stringified = int.to_s
+        @arrayified = int.to_s.split('')
+        @length = int.to_s.length
+        @offset = @length % 3
+    end
+
+    def commified
+        commified = ''
+        index = TrackIndex.new
+        @length.times do
+            commified += commify index.next
+        end
+       commified
+    end
+
+    def commify index
+        (index != 0 && index%3 == @offset && @length > 3) ? ',' + @stringified[index] : @stringified[index]
+    end
 
 end
 
-end
 class TrackIndex
   def initialize
-    @@count = 0
-    @@kickstarted = false
+    @count = 0
+    @kickstarted = false
   end
 
   def next
-    @@count += @@kickstarted == false ? 0 : 1
-    @@kickstarted = true
-    @@count
+    @count += @kickstarted == false ? 0 : 1
+    @kickstarted = true
+    @count
   end
 end
 
-
-def commify index, length, el
-    offset = length % 3
-    comma_or_nada = (index != 0 && index%3 == offset && length > 3) ? ',' : ''
-    commified = comma_or_nada + el
-end
-
-def arrayify_int int
-    int.to_s.split('')
-end
-
 def separate_comma int
-    arrayified = arrayify_int(int)
-    length = arrayified.length
-    the_return = ''
-    index = TrackIndex.new()
-   arrayified.each do |el|
-        the_return += commify((index.next), length, el)
-    end
-    the_return
+    input = IntHandler.new(int)
+    input.commified
 end
 
-puts separate_comma 1
-puts separate_comma 10
-puts separate_comma 100
-puts separate_comma 1000
-puts separate_comma 10000
-puts separate_comma 100000
-puts separate_comma 1000000
-puts separate_comma 10000000
-puts separate_comma 100000000
-puts separate_comma 1000000000
-puts separate_comma 1000000000000000000000000000000000
-puts separate_comma 10000000000000000000000000000000000
-puts separate_comma 100000000000000000000000000000000000
+#testing output
+i = 1
+10.times do
+puts separate_comma i
+i *=10
+end
 
 __END__
 Directions:
@@ -132,3 +115,33 @@ Write a method separate_comma which takes a positive integer as its input and re
     Top of file ^^
 
 # 3. Reflection
+    What was your process for breaking the problem down? What different approaches did you consider?
+        My basic idea was to iterate each character and decide whether or not that
+        the cahracter needs to be proceeded by a ','. The two ways that I considered were
+        1) .split('') the string version and visit each index then returning with .join()
+        2) setting a new variable to an empty string, then appending on the either the current
+           char or ',' + char
+
+    Was your pseudocode effective in helping you build a successful initial solution?
+        Yes it was effective, and I had to reference my pseudocode a few times to remember
+        the intention behind my methods.
+
+    What new Ruby method(s) did you use when refactoring your solution? Describe your experience of using the Ruby documentation to implement it/them (any difficulties, etc.). Did it/they significantly change the way your code works? If so, how?
+        I decided to write an IntHandler and IndexTracker class. I decided this for two reasons, I thought
+        it would be cool to see how to write classes in ruby, and my code was looking a little
+        repetetive. I found the ruby docs helpful, but I mainly use stackoverflow, or
+        other peoples blogs to find my answers.  If I know exactly what I am looking for, I go
+        to the docs. If I'm looking for more conceptual/best practice stuff, I like to see what I can
+        find, and hopefully avoid some of the pitfalls. Using the built in methods can be nice because they
+        allow you to write your code without having to deal with so much internal logic and testing.
+        However, the best way for me to get an understanding is to write out that logic. It helps me
+        see why / how certain things are done in certain ways.
+
+    How did you initially iterate through the data structure?
+        for i in 0...length
+    Do you feel your refactored solution is more readable than your initial solution? Why?
+        Yes I do, looking at the function, it's clear to see that I am defining an integer parameter,
+        that is passed to a class that acts as a handle, then returning it's .commafied property.
+        Going deeper, the code is much easier to read as well. Upon initialization, I set all
+        the properties I will be using.  You end up seeing a lot more readable words, and less
+        formulas or equations. Also, seeing the '@' helps the reader get a grip on whats what.
