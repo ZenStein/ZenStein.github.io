@@ -1,14 +1,12 @@
 
-
+=begin
 # 1. Initial Solution
 
 def separate_comma int
     input_s = int.to_s
-    input_to_a = []
     returned_input = ''
     i = 0
-    start = input_to_a.length % 3
-
+    start = input_s.length % 3
     for i in 0...input_s.length
         if  i !=0 && (start == i || (i - start)%3 == 0)
             returned_input += ',' + input_s[i]
@@ -20,20 +18,77 @@ def separate_comma int
     returned_input
 end
 
+puts separate_comma 1
 puts separate_comma 10
-puts separate_comma 1055
-puts separate_comma 10245
-puts separate_comma 106245
-puts separate_comma 10000098080980980980980980980980980980
+puts separate_comma 100
+puts separate_comma 1000
+puts separate_comma 10000
+puts separate_comma 100000
+puts separate_comma 1000000
+puts separate_comma 10000000
+puts separate_comma 100000000
+puts separate_comma 1000000000
+puts separate_comma 1000000000000000000000000000000000
+puts separate_comma 10000000000000000000000000000000000
+puts separate_comma 100000000000000000000000000000000000
+=end
+
 
 # 2. Refactored Solution
+class IntHandle
+def initialize int
+
+end
+
+end
+class TrackIndex
+  def initialize
+    @@count = 0
+    @@kickstarted = false
+  end
+
+  def next
+    @@count += @@kickstarted == false ? 0 : 1
+    @@kickstarted = true
+    @@count
+  end
+end
 
 
+def commify index, length, el
+    offset = length % 3
+    comma_or_nada = (index != 0 && index%3 == offset && length > 3) ? ',' : ''
+    commified = comma_or_nada + el
+end
 
+def arrayify_int int
+    int.to_s.split('')
+end
 
+def separate_comma int
+    arrayified = arrayify_int(int)
+    length = arrayified.length
+    the_return = ''
+    index = TrackIndex.new()
+   arrayified.each do |el|
+        the_return += commify((index.next), length, el)
+    end
+    the_return
+end
 
-
-
+puts separate_comma 1
+puts separate_comma 10
+puts separate_comma 100
+puts separate_comma 1000
+puts separate_comma 10000
+puts separate_comma 100000
+puts separate_comma 1000000
+puts separate_comma 10000000
+puts separate_comma 100000000
+puts separate_comma 1000000000
+puts separate_comma 1000000000000000000000000000000000
+puts separate_comma 10000000000000000000000000000000000
+puts separate_comma 100000000000000000000000000000000000
 
 __END__
 Directions:
