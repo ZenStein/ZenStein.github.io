@@ -25,7 +25,7 @@
 #               c. take arr3, and repeat from a. this will happen quite a few times.
 #          4. @method groups: takes return from shuffles and groups according to @modulus returns grouped array
 #
-# 1. Initial Solution
+# 1. Initial Solution(check commits) + refractor
 
 class Grouper
   def initialize arr
@@ -108,11 +108,41 @@ names = ['Jack Abernethy','Mohammad Amin','Zollie Barnes',
          'Matthew Oppenheimer','Mason Pierce','Joe Plonsker','Mira Scarvalone','Joseph Scott','Chris Shahin',
          'Benjamin Shpringer','Lindsey Stevenson','Philip Thomas','Gary Tso','Ting Wang','Clinton Weber',
          'Monique Williamson','Regina Wong','Hanah Yendler']
+
+
 grouper = Grouper.new names
 puts grouper.groups
 
+
+__END__
 # 3. Refactored Solution
 
 
 # 4. Reflection
+What was the most interesting and most difficult part of this challenge?
+  The most interesting was the shuffle method I wrote. I used no built in methods,
+  and it took me a while. I am aware there is a .shuffle method that would have saved
+  me some time. The most difficult part of this is on line 71. I got the array to shuffle
+  on one iteration. Once I added more though, the code wasn't working. I learned that when
+  you set something to equal something in ruby, it shares the reference, I thought I was
+  only setting it to the value. Using .dup made the copy that I needed.
+Do you feel you are improving in your ability to write pseudocode and break the problem down?
+  Yes. I like writing pseudocode, even though I usually end up with something different, than
+  what I first had thought. I'm sure I will get better with more experience. Even though,
+  writing out the pseudo has been beneficial as it gives me a base to work off of.
+Was your approach for automating this task a good solution? What could have made it even better?
+  It's a little sloppy. I could have extracted it a bit further to make it more readable.
+  I also could allow the user to input his desired group number goal.  I have this hard
+  coded in for now, adding this feature would make it more dynamic.
+What data structure did you decide to store the accountability groups in and why?
+  I used an array for the data and my 'shuffle map' and I used a hash for the grouping
+  part of the logic.  I then went through every key in the hash, and set the  values
+  to the corresponding shuffled index.
+What did you learn in the process of refactoring your initial solution? Did you learn any new Ruby methods?
+  I refactored as I went along, I'm not sure if this is a good solution, however I feel that
+  when I write things that I know I am going to change later, I end up creating a rats
+  nest when I go back.  It seems to make sense to do it then.  I usually refactor when after I'm done,
+  I notice something that can be better. If I notice something that I can improve while I'm writing, I do it then.
+  I learned there is a shuffle method and a dup method.
+
 
