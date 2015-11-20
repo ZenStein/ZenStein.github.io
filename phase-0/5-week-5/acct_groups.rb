@@ -12,7 +12,7 @@
 # Output: @Method groups: (getter only) Array[[Array]] Array containing Arrays of the grouped people
 # Output: @Method random_num: returns a random number 1 thru length-1. will be used to represent array cut at index.
 # Steps :
-#          1. create class descriped above
+#          1. create class described above
 #          2. upon instantiation, instance var list, length, and modulus will be created.
 #           @method modulus
 #                a. run modulus 5,4 on length
@@ -116,7 +116,7 @@ puts grouper.groups
 
 __END__
 # 3. Refactored Solution
-
+Code above ^^
 
 # 4. Reflection
 What was the most interesting and most difficult part of this challenge?
