@@ -37,11 +37,11 @@ p my_hash_finding_method(my_family_pets_ages, 3)
 # Person 2
 def my_array_modification_method!(source, thing_to_modify)
   source.map! do |x|
-    if x.is_a?(Integer)
-      x + thing_to_modify
-    else
-      x
-    end
+   if x.is_a?(Integer)
+     x + thing_to_modify
+   else
+    x
+   end
   end
 end
 my_array_modification_method!(i_want_pets, 10)
@@ -72,10 +72,10 @@ end
 p my_array_sorting_method(i_want_pets)
 
 def my_hash_sorting_method(source)
-  # source.to.sort_by! {|name, age| age}
-  # puts source
-  sorted_hash = source.sort {|x,y| x[1] <=> y[1]}
-  puts sorted_hash
+   # source.to.sort_by! {|name, age| age}
+   # puts source
+   sorted_hash = source.sort {|x,y| x[1] <=> y[1]}
+   puts sorted_hash
 end
 
 p my_hash_sorting_method(my_family_pets_ages)
