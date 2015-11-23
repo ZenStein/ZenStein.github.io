@@ -11,6 +11,10 @@ body{
     height: auto;
     width: 100%;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 #cfs-wireframe-topbar{
     position: fixed;
     width:100%;
@@ -45,22 +49,38 @@ body{
     width: 15%;
 }
 #cfs-wireframe-foot-nav{
-    position: fixed;
+    position: relative;
     left:0px;
     bottom: 0px;
+    height: 300px;
+    width: 100%;
+    background-color: #111111;
+    color: grey;
+    opacity: .8;
+
 }
 #cfs-wireframe-foot-nav, #cfs-wireframe-foot-nav ul{
     width:100%;
-    padding: 0px;
+    padding: 5px;
+    font-size: 18px;
 }
 #cfs-wireframe-foot-nav li{
     width: 13%;
-    display: inline;
+    display: block;
     float: left;
+    clear: both;
     position:relative;
     list-style-type: none;
-    color: lawngreen;
+    color: grey;
     text-align: center;
+margin: 8px;
+}
+.footer-section{
+    border-right: 1px solid grey;
+    width:70px;
+    height: 90%;
+    margin-top: 2%;
+    margin-left: 20px;
 }
 .content-containter{
 
