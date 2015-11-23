@@ -55,6 +55,19 @@ def mode (array)
   new_array
 end
 
-
+__END__
 
 # 4. Reflection
+
+Which data structure did you and your pair decide to implement and why?
+  We used a hash, because the hash allowed us to use the array value as the hash key,
+  and the hash value would indicate the frequency of that value in the array. Using a hash was easier
+  because the  key=>value keeps the value and the frequency bound together.
+Were you more successful breaking this problem down into implementable pseudocode than the last with a pair?
+  Yes and no. We were successful in both, I wouldn't say more successful. I would say I'm stil geting the
+  hang of writing pseudocode.
+What issues/successes did you run into when translating your pseudocode to code?
+  We solved this problem fairly easily, with little effort. Our code passed on the first try.
+What methods did you use to iterate through the content? Did you find any good ones when you were refactoring? Were they difficult to implement?
+  Yes, I found a new method. This method returns the value if that value is the max value.
+  .value.max is a pretty cool method, saves a lot of logic code!
