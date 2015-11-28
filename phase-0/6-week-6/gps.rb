@@ -16,7 +16,7 @@ unless library.has_key?(item_to_make)
 end
 #*********************************************************
     #*** Logical unit 2 ***#
-  serving_size = library.values_at(item_to_make)[0]
+  serving_size = library[item_to_make]
   remaining_ingredients = num_of_ingredients % serving_size
 #*********************************************************
     #*** Logical unit 3 ***#
