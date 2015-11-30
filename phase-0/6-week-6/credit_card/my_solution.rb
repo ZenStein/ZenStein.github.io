@@ -109,12 +109,17 @@ class CreditCard
     sum
   end
 end
-
-
-
-
-
-
-
 card = CreditCard.new(1232468303284759)
 card.check_card
+
+__END__
+        Reflection
+
+What was the most difficult part of this challenge for you and your pair?
+  Keeping track of whether or not the values were of type string or int.
+What new methods did you find to help you when you refactored?
+  The .each_with_index saved us from having to manually keep track of the index.
+What concepts or learnings were you able to solidify in this challenge?
+  Getting a grasp on what type of var you are working with.  Training my mind
+  to take that into account. Coming off Javascript, it wasn't necessary.
+  I now need to 'retrain' my mind to take into the var type into account.
