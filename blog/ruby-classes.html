@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../imgs/favicon.ico"/>
+     <link rel="stylesheet" type="text/css" href="../stylesheets/default.css" />
+     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css" />
+    <title>BLog</title>
+</head>
+<body>
+<div class="blog-carousel-container">
+    <div class="blog-carousel-arrow blog-carousel-arrow-left">
+        <img src="imgs/left-arrow.svg">
+    </div>
+    <div class="blog-carousel-picture-container"></div>
+    <div class="blog-carousel-arrow blog-carousel-arrow-right">
+        <img src="imgs/right-arrow.svg">
+    </div>
+</div>
+<div class="blog-template-head">Ruby Classes for newbees<br>
+    <small>A simple explanation</small>
+<div class="blog-body-desc">A stripped down class:</div>
+<div class="blog-body">
+    <code>
+        class MyNameClass<br>
+        &emsp;def initialize name<br>
+        &emsp;&emsp;@name = name<br>
+        &emsp;end<br>
+        end<br>
+    </code>
+</div>
+
+    <div class="blog-body-desc">Explanation:</div>
+<div class="blog-body">
+    Above we have the most basic class definition.
+    the initialize method will always be called, whenever we
+    'new up' a new object.  What does this mean? Your code will
+    look something like this.  --><br>
+    <code>
+    my_name = MyNameClass.new('Chris')<br>
+    </code>
+    You have now 'new'd up' and object. We now have an object,
+    we decided to call it 'my_name', this is an arbitrary variable name.
+    This object has an instance variable, this again is arbitrary,
+    we decided to call it '@name' The '@' sign signifies it is an
+    instance variable. In our case, the value is 'Chris', because that
+    is what we passed in when it was 'new'd up'. Lets say we need Another
+    object. --> <br>
+    <code>
+        my_friends_name = MyNameClass.new('Steve')<br>
+    </code>
+    Same as above, just another object. That's cool we have objects with
+    instance variables whose values are different, but what do we do with them!!??
+    On to the next level.......
+</div>
+</div>
+</body>
+<footer class="blog-footer"></footer>
+</html>
+
+
