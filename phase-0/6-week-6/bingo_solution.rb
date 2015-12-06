@@ -39,7 +39,6 @@ class BingoBoard
     puts letter
     puts number
     check_board letter, number
-    #board
   end
   def check_board (letter, number)
     index = @bingo.index(letter)
@@ -62,15 +61,12 @@ class BingoBoard
     @bingo_board = board
   end
 end
-
-
 def call
   bingo = ["B","I","N","G","O"]
   index = Random.rand(Time.now.strftime('%s').to_i) % 5
   number = Random.rand(Time.now.strftime('%s').to_i) % 100 + 1
   bingo[index] + number.to_s
 end
-
 def check board, called_number
   bingo = ["B","I","N","G","O"]
   index = bingo.index(called_number[0])
