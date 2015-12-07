@@ -5,7 +5,7 @@
   if you think you will win. Next you see the turn card, again you are asked, same with river, Then you see if you won.
   It will keep track of every time you were right and wrong.
  *
- *  base pseudo:
+ *  Version 1:
         Steps:
  Establish who will have the dealer button on the first round,
  The dealer button then alternates back and forth till the match
@@ -71,6 +71,25 @@
 	    console.log('Your Cards:           ' + game.playerOnesCards);
 
     }
+
+/**
+ *
+ *
+ What was the most difficult part of this challenge?
+	 Going back to javascript, after all this ruby, was a mind challenge. Also keeping a grip on everything
+	 that is going on. Also, using lthe prompt module that i found on github was pretty frustrating. The prompt
+	 didn't work the way I needed it to, I spent way to much time trying to get it to work.
+ What did you learn about creating objects and functions that interact with one another?
+	 I got a refreshment on how to do these things.
+ Did you learn about any new built-in methods you could use in your refactored solution? If so, what were they and how do they work?
+	 I wrote my own game, and this is the bare nuts and bolts. There are too many things that need to be done still.
+ How can you access and manipulate properties of objects?
+	 I mainly used getter/setter functions in my constructors.
+ *
+ *
+ *
+ */
+
 
 
 
