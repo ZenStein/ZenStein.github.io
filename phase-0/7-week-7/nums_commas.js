@@ -65,7 +65,11 @@ function separateComma(number){
 // Reflection
 /*
  What was it like to approach the problem from the perspective of JavaScript? Did you approach the problem differently?
+	 No, the solution was relatively the same.
  What did you learn about iterating over arrays in JavaScript?
+			 the forEach method is quite similar to ruby's .each.
  What was different about solving this problem in JavaScript?
+	 essentially nothing, minus the syntactical differences.
  What built-in methods did you find to incorporate in your refactored solution?
+		 This solution was refactored by eliminating if statement. We found it wasn't necessary.
  */
