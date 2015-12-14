@@ -17,3 +17,5 @@ SELECT state_name, region_id FROM states ORDER BY region_id ASC;
 SELECT region_name FROM regions WHERE region_name LIKE '%Central%';
 
 SELECT regions.region_name, states.state_name FROM regions INNER JOIN states ON states.region_id = regions.id;
+
+![Shema]()
