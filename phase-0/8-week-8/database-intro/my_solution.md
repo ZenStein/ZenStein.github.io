@@ -18,4 +18,4 @@ SELECT region_name FROM regions WHERE region_name LIKE '%Central%';
 
 SELECT regions.region_name, states.state_name FROM regions INNER JOIN states ON states.region_id = regions.id;
 
-![Shema]()
+![Shema](https://github.com/ZenStein/ZenStein.github.io/blob/master/phase-0/8-week-8/database-intro/imgs/schema.png)
