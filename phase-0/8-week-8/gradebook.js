@@ -69,6 +69,14 @@ function average (array){
 }
 // __________________________________________
 // Reflect
+/*
+What did you learn about adding functions to objects?
+	I didn't learn anything new, however, it was a good refreshment to work on this problem.
+How did you iterate over nested arrays in JavaScript?
+	I used a nested for - in loop.
+Were there any new methods you were able to incorporate? If so, what were they and how did they work?
+	I used the .push built in method.
+*/
 // __________________________________________
 // Test Code:  Do not alter code below this line.
 function assert(test, message, test_number) {
