@@ -96,15 +96,42 @@ for (var position in voteCount){
 // Refactored Solution
 
 
+for (var name in votes){
+	for(var position in votes[name]) {
+		var newName = votes[name][position];
+		if (voteCount[position][newName] == undefined) {
+			voteCount[position][newName] = 1;
+		}
+		else {
+			voteCount[position][newName] += 1;
+		}
+	}
+}
 
+//console.log(voteCount);
+for (var position in voteCount){
+	var marker = 0;
+	for(var person in voteCount[position]){
+		if (voteCount[position][person] > marker){
+			marker = voteCount[position][person];
+			officers[position] = person;
+		}
+	}
+}
 
 
 
 // __________________________________________
 // Reflection
 
-
-
+/*
+What did you learn about iterating over nested objects in JavaScript?
+	It was a good refreshment to work on this challenge.
+Were you able to find useful methods to help you with this?
+	Using a nested for in loop was how this problem was solved.
+What concepts were solidified in the process of working through this challenge?
+	Object iteration and property assignments.
+*/
 
 
 
