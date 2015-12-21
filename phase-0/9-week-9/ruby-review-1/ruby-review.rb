@@ -7,7 +7,7 @@
 
 # Pseudocode
 
-
+# my pseudocode was done by hand for this exercise
 
 # Initial Solution
 # class NumToWord
