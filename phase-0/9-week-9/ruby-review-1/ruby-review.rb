@@ -222,6 +222,12 @@ puts 'cleareeeeed new'
 
 
 
-
+__END__
 
 # Reflection
+What concepts did you review in this challenge?
+  Using classes, and working with objects.
+What is still confusing to you about Ruby?
+  Getting used to the differences
+What are you going to study to get more prepared for Phase 1?
+  I plan on doing a lot of review
