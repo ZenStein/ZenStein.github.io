@@ -188,10 +188,6 @@ class NumToWord
     position_name.call(number)
   end
 
-  def set_place_vals
-
-  end
-
   def is_unique_num?
     last =  @number_string[@length-1]
     second_last =  @length > 1 ? @number_string[@length-2] : ''
