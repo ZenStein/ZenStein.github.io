@@ -58,7 +58,7 @@ puts game.guess(10) # => :correct
 puts game.solved?   # => true
 =end
 # 4. Convert your driver test code from that challenge into Assert Statements
-game = GuessingGame.new(10)
+  game = GuessingGame.new(10)
 assert(1) {
   game.instance_of? GuessingGame
 }
@@ -84,3 +84,4 @@ assert(7){
 __END__
 # 5. Reflection
  On review One.
+
